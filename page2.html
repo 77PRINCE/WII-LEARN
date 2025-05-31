@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wii Learn - Page 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>WII-LEARN</h1>
+    <div id="quiz-box">
+      <p id="question">What does CPU stand for?</p>
+      <div id="options">
+        <button class="option" onclick="selectOption(this)">Central Process Unit</button>
+        <button class="option" onclick="selectOption(this)">Computer Personal Unit</button>
+        <button class="option" onclick="selectOption(this)">Central Processing Unit</button>
+        <button class="option" onclick="selectOption(this)">Central Power Unit</button>
+      </div>
+      <button id="nextBtn" onclick="goToNextPage()" disabled>Next</button>
+    </div>
+  </div>
+
+  <script>
+    let selected = null;
+
+    function selectOption(btn) {
+      // Remove "selected" class from all options
+      document.querySelectorAll('.option').forEach(option => {
+        option.classList.remove('selected');
+      });
+      // Add "selected" class to clicked one
+      btn.classList.add('selected');
+      selected = btn.textContent;
+      document.getElementById("nextBtn").disabled = false;
+    }
+
+    function goToNextPage() {
+      if (selected) {
+        // You can store the answer in localStorage if needed
+        localStorage.setItem("answer2", selected); // Store the answer in localStorage
+        window.location.href = "result.html"; // Goes to the result page
+      }
+    }
+  </script>
+</body>
+</html>

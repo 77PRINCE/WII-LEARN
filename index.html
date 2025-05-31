@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wii Learn - Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>WII-LEARN</h1>
+    <p id="slogan">Explore - Study - Succeed...</p>
+    
+    <div id="quiz-box">
+      <p id="question">Which language is used to style web pages?</p>
+      <div id="options">
+        <button class="option" onclick="selectOption(this)">HTML</button>
+        <button class="option" onclick="selectOption(this)">CSS</button>
+        <button class="option" onclick="selectOption(this)">Python</button>
+        <button class="option" onclick="selectOption(this)">PHP</button>
+      </div>
+      <button id="nextBtn" onclick="goToNextPage()" disabled>Next</button>
+    </div>
+  </div>
+
+  <script>
+    let selected = null;
+
+    function selectOption(btn) {
+      // Remove "selected" class from all options
+      document.querySelectorAll('.option').forEach(option => {
+        option.classList.remove('selected');
+      });
+      // Add "selected" class to clicked one
+      btn.classList.add('selected');
+      selected = btn.textContent;
+      document.getElementById("nextBtn").disabled = false;
+    }
+
+    function goToNextPage() {
+      if (selected) {
+        // You can store the answer in localStorage if needed
+        // localStorage.setItem("answer1", selected);
+        window.location.href = "page2.html";
+      }
+    }
+  </script>
+</body>
+</html>
