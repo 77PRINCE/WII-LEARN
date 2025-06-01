@@ -1,49 +1,120 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wii Learn - Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-up</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>WII-LEARN</h1>
-    <p id="slogan">Explore - Study - Succeed...</p>
-    
-    <div id="quiz-box">
-      <p id="question">Which language is used to style web pages?</p>
-      <div id="options">
-        <button class="option" onclick="selectOption(this)">HTML</button>
-        <button class="option" onclick="selectOption(this)">CSS</button>
-        <button class="option" onclick="selectOption(this)">Python</button>
-        <button class="option" onclick="selectOption(this)">PHP</button>
-      </div>
-      <button id="nextBtn" onclick="goToNextPage()" disabled>Next</button>
-    </div>
-  </div>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="earn.html">Earn</a></li>
+      <li><a href="teach.html">Teach</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
 
-  <script>
-    let selected = null;
-
-    function selectOption(btn) {
-      // Remove "selected" class from all options
-      document.querySelectorAll('.option').forEach(option => {
-        option.classList.remove('selected');
-      });
-      // Add "selected" class to clicked one
-      btn.classList.add('selected');
-      selected = btn.textContent;
-      document.getElementById("nextBtn").disabled = false;
-    }
-
-    function goToNextPage() {
-      if (selected) {
-        // You can store the answer in localStorage if needed
-        // localStorage.setItem("answer1", selected);
-        window.location.href = "page2.html";
-      }
-    }
-  </script>
+  <section class="hero">
+    <h1>Welcome to <span class="brand"><h1>U-up</h1></span></h1>
+    <p class="tagline">A Learn → Earn → Teach platform for everyone.</p>
+    <a class="cta-button" href="learn.html">Start Learning</a>
+  </section>
 </body>
 </html>
+
+
+<!-- learn.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+  <section class="content">
+    <h2>📘 Learn New Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Intro to Graphic Design</h3>
+        <p>Learn how to design stunning graphics with tools like Canva & Figma.</p>
+        <a href="#">Start</a>
+      </div>
+      <div class="card">
+        <h3>Basic HTML & CSS</h3>
+        <p>Begin your web development journey by learning how to build webpages.</p>
+        <a href="#">Start</a>
+      </div>
+      <div class="card">
+        <h3>Canva for Business</h3>
+        <p>Create powerful marketing materials using free design tools.</p>
+        <a href="#">Start</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!-- wallet.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="earn.html">Earn</a></li>
+      <li><a href="teach.html">Teach</a></li>
+      <li><a href="wallet.html" class="active">Wallet</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="wallet">
+    <h2>💼 Nkwa Wallet</h2>
+    <p class="balance">Balance: <span>0 FCFA</span></p>
+    <div class="wallet-actions">
+      <button onclick="alert('Top-up via Nkwa Pay')">Top Up</button>
+      <button onclick="alert('Withdraw via Nkwa Pay')">Withdraw</button>
+      <button onclick="alert('Send to another user')">Send</button>
+    </div>
+  
+  </section>
+   
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U-up </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <!-- Optional logo: use only if you have logo.png in the same folder -->
+    <!-- <img src="logo.png" alt="U-up Logo" class="logo"> -->
+
+    <h1>Welcome to <span class="brand">U-up</span></h1>
+  </div>
+
+</body>
+</html>
+
+

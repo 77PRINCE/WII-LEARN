@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>U-up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5faff;
+      color: #333;
+    }
+
+    nav {
+      background-color: #4fc3f7;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #4fc3f7, #039be5);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #039be5;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #e1f5fe;
+      color: #555;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">U-up</a>
+    <ul>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="earn.html">Earn</a></li>
+      <li><a href="teach.html">Teach</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to U-up</h1>
+    <p>We are building a learning economy where knowledge flows peer-to-peer, and every user can Learn, Earn, and Teach!</p>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="section">
+    <div class="card">
+      <h2>🌍 Our Vision</h2>
+      <p>To democratise learning and earning for both tech and non-tech communities using a simple, gamified, and peer-driven approach.</p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Our Mission</h2>
+      <p>To empower individuals through a Learn → Earn → Teach cycle, supported by our custom Nkwa Pay wallet integration for seamless in-platform payments and bounties.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="card">
+      <h2>📚 Learn</h2>
+      <p>Access easy-to-understand mini-classes, designed by real users like you. From graphic design to agriculture, we cover everything.</p>
+    </div>
+
+    <div class="card">
+      <h2>💼 Earn</h2>
+      <p>Take on real-world tasks, mini-jobs, or quizzes to earn tokens directly into your Nkwa Wallet. No tech skills required to start!</p>
+    </div>
+
+    <div class="card">
+      <h2>🎓 Teach</h2>
+      <p>Have a skill? Create a mini-class and share it with the community. You’ll earn rewards and recognition for your contributions.</p>
+    </div>
+
+    <div class="card">
+      <h2>💳 Nkwa Pay</h2>
+      <p>Our platform uses the Nkwa Wallet system, allowing users to send, receive, top up, and withdraw funds with ease.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 U-up | Learn • Earn • Teach
+  </footer>
+</body>
+</html>

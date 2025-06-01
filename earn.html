@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>U-up</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    nav {
+      background: #4fc3f7;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid white;
+    }
+
+    .token-counter {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(135deg, #0288d1, #26c6da);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 1000;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .token-counter .label {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .token-counter .value {
+      font-size: 18px;
+      background: white;
+      color: #0288d1;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #0277bd;
+    }
+
+    .class-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0288d1;
+    }
+
+    .highlight {
+      background: #e0f7fa;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      font-weight: bold;
+      color: #00796b;
+    }
+
+    .card p {
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #e1f5fe;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Token counter moved to top and works properly -->
+  <div class="token-counter">
+    <span class="label">TOKENS</span>
+    <span class="value">100</span>
+  </div>
+
+  <!-- ✅ Navigation bar -->
+  <nav>
+    <a href="index.html" class="logo">U-up</a>
+    <ul>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="earn.html" class="active">Earn</a></li>
+      <li><a href="teach.html">Teach</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="about.html">About</a></li>
+      
+    </ul>
+  </nav>
+
+  <h1>Earn Tokens & Opportunities 💰</h1>
+
+  <section class="class-cards">
+    <div class="card">
+      <h3><span class="highlight">Task Marketplace</span></h3>
+      <p>Complete real tasks like editing, transcribing, or researching. Tokens are earned per task!</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight">Bounty Board</span></h3>
+      <p>Users post open challenges or microjobs with bounties. Solve issues and earn rewards instantly.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight">Earn by Teaching</span></h3>
+      <p>Share your knowledge! Submit a mini-class, and once approved, receive tokens via Nkwa Pay.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight">Micro Jobs Hub</span></h3>
+      <p>Take up small platform jobs like moderating content, tagging lessons, or UI testing for quick pay.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight">Referral Earnings</span></h3>
+      <p>Invite friends. When they learn, you earn. Track your referral stats and earn passive tokens.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight">Token Exchange</span></h3>
+      <p>Convert your Nkwa tokens to airtime, data, discounts, or voucher rewards. Instant value return.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 U-up. Powered by the Learn–Earn–Teach ModeL</p>
+  </footer>
+
+</body>
+</html>

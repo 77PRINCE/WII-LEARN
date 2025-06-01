@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-up | Teach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f4f7ff;
+      color: #333;
+      padding: 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #3b82f6;
+      padding: 1rem;
+      color: white;
+      border-radius: 0.5rem;
+    }
+    .nav-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    .active {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .payment-section {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .payment-options {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+    }
+    .payment-card {
+      padding: 1.5rem;
+      background-color: #3b82f6;
+      border-radius: 1rem;
+      color: white;
+      text-align: center;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .payment-card:hover {
+      transform: scale(1.05);
+    }
+    .payment-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .payment-card p {
+      margin-bottom: 1rem;
+    }
+    .payment-card button {
+      background-color: #2563eb;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .teach-form {
+      display: grid;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .teach-form input, .teach-form select, .teach-form textarea {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    .teach-form button {
+      background: #3b82f6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .class-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" style="font-weight: bold; font-size: 1.2rem;">U-up</a>
+    <div class="nav-links">
+      <a href="learn.html">Learn</a>
+      <a href="earn.html">Earn</a>
+      <a href="teach.html" class="active">Teach</a>
+      <a href="wallet.html">Wallet</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Teach & Inspire</h1>
+    <p>Submit a mini-class and share your knowledge. We support both tech and non-tech skills!</p>
+  </section>
+
+  <section class="payment-section">
+    <h2>Choose Your Payment Plan</h2>
+    <p>Before submitting your course, please select your payment option:</p>
+    <div class="payment-options">
+      <div class="payment-card" id="monthly-card">
+        <h3>Monthly Plan</h3>
+        <p>2500 CFA/month</p>
+        <button onclick="activateTeachingForm('monthly')">Choose</button>
+      </div>
+      <div class="payment-card" id="annual-card">
+        <h3>Annual Plan</h3>
+        <p>25000 CFA/year</p>
+        <button onclick="activateTeachingForm('annual')">Choose</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="teach-form">
+    <h2>Upload a Mini-Class 📚</h2>
+    <form action="/submit-class" method="POST" enctype="multipart/form-data">
+      <label for="title">Course Title:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="desc">Course Description:</label>
+      <textarea id="desc" name="description" rows="4" required></textarea>
+
+      <label for="file">Upload File (PDF/MP4):</label>
+      <input type="file" id="file" name="file" required />
+
+      <button type="submit">Submit Class</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 U-up. Learn | Earn | Teach</p>
+  </footer>
+
+  <script>
+    function activateTeachingForm(paymentType) {
+      const form = document.querySelector('.teach-form');
+      const paymentSection = document.querySelector('.payment-section');
+      
+      paymentSection.style.display = 'none';
+      form.style.display = 'block';
+      
+      // You could save paymentType to use later for registration or validation purposes
+      console.log('Selected payment plan:', paymentType);
+    }
+  </script>
+
+</body>
+</html>

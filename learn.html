@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>U-up</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #4fc3f7;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+      color: #002f4b;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      padding: 30px 20px 10px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .class-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4fc3f7;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><strong><h1>U-up</h1></strong></div>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn.html" class="active">Learn</a></li>
+      <li><a href="earn.html">Earn</a></li>
+      <li><a href="teach.html">Teach</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Explore & Learn</h1>
+  </header>
+
+  <section class="class-cards">
+    <!-- Idea 1: Weekly Leaderboard -->
+    <div class="card">
+      <h2>🏆 Weekly Leaderboard</h2>
+      <p>See top learners this week. Climb up by completing lessons and challenges to earn rewards!</p>
+    </div>
+
+    <!-- Idea 3: Mentorship Zone -->
+    <div class="card">
+      <h2>🧑‍🏫 Mentorship Zone</h2>
+      <p>Pair up with a peer mentor. Get real-time support in tech and non-tech areas, from beginners to pros!</p>
+    </div>
+
+    <!-- Idea 5: Learning Milestones -->
+    <div class="card">
+      <h2>🎯 Learning Milestones</h2>
+      <p>Earn badges and recognition as you complete modules. Track your journey and share achievements!</p>
+    </div>
+
+    <!-- Idea 6: Challenge Your Peers -->
+    <div class="card">
+      <h2>🎮 Challenge Your Peers</h2>
+      <p>Duel with others in quiz battles. Show what you’ve learned and earn tokens for correct answers!</p>
+    </div>
+
+    <!-- Idea 7: Learn-To-Earn -->
+    <div class="card">
+      <h2>🎁 Learn-To-Earn</h2>
+      <p>Earn Nkwa tokens after completing lessons. Redeem them in the wallet or challenge your friends.</p>
+    </div>
+
+    <!-- Idea 8: Mini Courses Hub -->
+    <div class="card">
+      <h2>🚀 Mini Courses Hub</h2>
+      <p>Access fast-paced, peer-created mini courses on tech and life skills. Learn quick and smart!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 U-up. Learn | Earn | Teach</p>
+  </footer>
+
+</body>
+</html>
